@@ -1,0 +1,129 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    background: linear-gradient(90deg, rgba(167,103,210,1) 0%, rgba(254,108,108,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container{
+    background-color: rgba(255,255,255,0.2);
+    min-width: 70vw;
+    max-width: 70vw;
+    min-height: 90vh;
+    max-height: 90vh;
+    border-radius: 2rem;
+    padding: 1.5rem;
+}
+
+.pesquisa-container{
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    gap: 1rem;
+    margin: 10px 15px;
+}
+
+.pesquisa-container input{
+    font-size: medium;
+    padding: 0.7rem 0.5rem;
+    border: none;
+    outline: none;
+    color: rgb(62 0 95);
+    border-bottom: 2px solid rgb(62 0 95);
+    background: unset;
+}
+
+::placeholder{
+    color: rgb(62 0 95);
+}
+
+.pesquisa-container button{
+    font-size: medium;
+    padding: 0.7rem 0.5rem;
+    border: none;
+    outline: none;
+    background-color: rgb(62 0 95);
+    color: white;
+    border-radius: 2rem;
+}
+
+.pesquisa-container button:hover{    
+    background-color: rgb(122, 2, 187);    
+}
+
+.pesquisa-container button:active{
+    background-color: rgb(62 0 95);
+}
+
+.grid-resultado{
+    margin: 10px 15px; 
+    overflow: auto;
+    max-height: 77vh; 
+    scrollbar-width: thin;
+    scrollbar-color:  rgb(62 0 95) rgb(245 245 245 / 0%);
+}
+
+.aviso{
+    color: rgb(62 0 95);
+}
+
+.item{
+    display: flex;
+    background-color: rgb(255 255 255 / 22%);
+    border-radius: 2rem;
+    padding: 2rem;
+    margin: 2rem;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    color: rgb(62 0 95);
+    gap: 2rem;
+}
+
+.item img{
+    border-radius: 50%;
+    width: 200px;
+}
+
+.principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media (max-width: 900px){
+    .container{
+        
+        min-width: 1px;
+        max-width: none;
+        min-height: 80vh;
+        max-height: none;
+        padding: 0.5rem;
+    }
+
+    .item img{
+        width: 100px;
+    }
+
+    .item{
+        
+        padding: 1rem;
+        margin: 1rem 0.5rem;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    
+}
